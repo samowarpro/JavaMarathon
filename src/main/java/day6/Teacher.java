@@ -33,6 +33,9 @@ public class Teacher {
                 case 5:
                     mark="отлично";
                     break;
+                default:
+                    mark="восхитительно";
+                    break;
             }
 
             System.out.println("Преподаватель "+this.name+" оценил студента с именем "+s.name+" по предмету "+this.subject+" на оценку "+mark+".");

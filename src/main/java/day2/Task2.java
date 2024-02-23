@@ -30,15 +30,16 @@ public class Task2 {
         }
         a=a+1;
         for(;a<b;a++) {
-            c = a % 5;
-            d = a % 10;
-            e = c == 0;
-            f = d == 0;
-            //System.out.println(e);
-            //System.out.println(f);
-                if(e == true && f == false ){
+            if(a%5 == 0 && a%10 != 0){
                 System.out.print(a+" ");
-                }
+            }
+//            c = a % 5;
+//            d = a % 10;
+//            e = c == 0;
+//            f = d == 0;
+//                if(e == true && f == false ){
+//                System.out.print(a+" ");
+//                }
 
         }
     }

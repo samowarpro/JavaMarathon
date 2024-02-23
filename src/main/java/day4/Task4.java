@@ -25,20 +25,25 @@ public class Task4 {
     Random rand = new Random();
     int[] massiv = new int[100];
 
-        for(int i = 0; i<100; i++){
-        massiv[i]= rand.nextInt(10000);
+        for(int i = 0; i<massiv.length; i++){
+        massiv[i] = rand.nextInt(10000);
         }
 
-        int sum=0;
-        int index=0;
-        for(int i = 0; i<100; i++){
-            if(i < massiv.length-2 && sum<=(massiv[i]+massiv[i+1]+massiv[i+2]) ){
-                sum = massiv[i]+massiv[i+1]+massiv[i+2];
-                index=i;
+        int sumOfTrio;
+        int sumFinal = 0;
+        int index = 0;
+        for(int i = 0; i < massiv.length-2; i++){
+            sumOfTrio = 0;
+            for (int j=i; j<i+3; j++){
+                sumOfTrio += massiv[j];
+            }
+            if (sumFinal < sumOfTrio){
+                sumFinal = sumOfTrio;
+                index = i;
             }
         }
         System.out.println(Arrays.toString(massiv));
-        System.out.println(sum);
+        System.out.println(sumFinal);
         System.out.println(index);
     }
 }

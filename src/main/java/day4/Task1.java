@@ -29,7 +29,6 @@ public class Task1 {
         Random rand = new Random();
         Scanner input = new Scanner (System.in);
         int i = input.nextInt();
-        int ii=0;
         int[] numbers = new int[i];
         for(int j = 0; j<i; j++){
             numbers[j]=rand.nextInt(11);
@@ -44,46 +43,35 @@ public class Task1 {
         System.out.print("Длина массива: "+numbers.length);
         System.out.println();
 //Количество чисел больше 8: 1
-        for(int x: numbers){
-            if (x > 8) {
-                ii = ii+1;
-            }
-        }
-        System.out.print("Количество чисел больше 8: "+ii);
-        System.out.println();
 //Количество чисел равных 1: 0
-        ii=0;
-        for(int x: numbers){
-            if (x == 1) {
-                ii = ii+1;
-            }
-        }
-        System.out.print("Количество чисел равных 1: "+ii);
-        System.out.println();
 //Количество четных чисел: 6
-        ii=0;
-        for(int x: numbers){
-            if (x%2==0) {
-                ii = ii+1;
-            }
-        }
-        System.out.print("Количество четных чисел: "+ii);
-        System.out.println();
 //Количество нечетных чисел: 4
-        ii=0;
-        for(int x: numbers){
-            if (x%2!=0) {
-                ii = ii+1;
-            }
-        }
-        System.out.print("Количество нечетных чисел: "+ii);
-        System.out.println();
 //Сумма всех элементов массива: 46
-        ii=0;
+        int intBiggerThan8 = 0;
+        int intEqualTo1 = 0;
+        int countOfEven = 0;
+        int countOfNotEven = 0;
+        int sum = 0;
         for(int x: numbers){
-            ii = ii+x;
+            if (x > 8)
+                intBiggerThan8 += 1;
+            if (x == 1)
+                intEqualTo1 += 1;
+            if (x%2==0)
+                countOfEven += 1;
+            if (x%2!=0)
+                countOfNotEven += 1;
+            sum += x;
         }
-        System.out.print("КСумма всех элементов массива: "+ii);
+
+        System.out.print("Количество чисел больше 8: "+intBiggerThan8);
         System.out.println();
+        System.out.print("Количество чисел равных 1: "+intEqualTo1);
+        System.out.println();
+        System.out.print("Количество четных чисел: "+countOfEven);
+        System.out.println();
+        System.out.print("Количество нечетных чисел: "+countOfNotEven);
+        System.out.println();
+        System.out.print("Сумма всех элементов массива: "+sum);
     }
 }

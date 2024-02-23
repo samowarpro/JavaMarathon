@@ -17,36 +17,30 @@ import java.util.Random;
 public class Task3 {
     public static void main(String[] args) {
         int[][] massiv = new int[12][8];
-        int[] massiv_summ = new int[12];
-        int summa = 0;
+        int summaStroki = 0;
+        int summaItogovaya = 0;
+        int index = 0;
         Random rand = new Random();
 
         //заполнение массива рандомными цифрами и вывод на экран
         for(int x = 0; x<massiv.length; x++){
             for(int y = 0; y<massiv[x].length; y++){
                 massiv[x][y] = rand.nextInt(50);
-                summa = summa + massiv[x][y];
+                summaStroki += massiv[x][y];
                 System.out.print(massiv[x][y]+" ");
             }
-            massiv_summ[x]=summa;
-            summa = 0;
+            if (summaStroki>summaItogovaya) {
+                summaItogovaya = summaStroki;
+                index = x;
+            }
+            summaStroki = 0;
             System.out.println();
         }
 
         // выбор максимальной строки
-        int y = massiv_summ[0];
-        int index = 0;
-        for(int x = 0; x<massiv_summ.length; x++){
-            if(massiv_summ[x]>=y){
-                index = x;
-                y = massiv_summ[x];
-            }
-        }
 
-        System.out.println(Arrays.toString(massiv_summ));
-        System.out.println("индекс строки, сумма чисел в которой максимальна = "+index+", сумма = "+y);
-        System.out.println(Arrays.toString(massiv[1]));
-        System.out.println(Arrays.stream(massiv[1]).sum());
+        System.out.println("индекс строки, сумма чисел в которой максимальна = "+index+", сумма = "+summaItogovaya);
+        System.out.println(Arrays.toString(massiv[index]));
     }
 }
 

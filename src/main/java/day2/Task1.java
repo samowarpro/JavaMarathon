@@ -26,8 +26,6 @@ public class Task1 {
         if(num>8){
             System.out.println("Многоэтажный дом");
         }
-        else if(num<=0){
-            System.out.println("Ошибка ввода");
-        }
+        else System.out.println("Ошибка ввода");
     }
 }
