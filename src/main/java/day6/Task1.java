@@ -17,7 +17,7 @@ public class Task1 {
         car1.info();
         moto1.info();
 
-        car1.yearDifference(2029);
-        moto1.yearDifference(2029);
+        System.out.println(car1.yearDifference(2034));
+        System.out.println(moto1.yearDifference(2029));
     }
 }

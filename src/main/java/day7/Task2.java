@@ -47,7 +47,7 @@ public class Task2 {
         Player player6 = new Player(rand.nextInt(10)+91);
         Player player7 = new Player(rand.nextInt(10)+91);
 
-        System.out.println("Количество игроков на поле: "+Player.countPlayers);
+        System.out.println("Количество игроков на поле: "+Player.getCountPlayers());
         System.out.println("Сколько выносливости у игрока, которого хотим загонять: "+player7.getStamina());
 
         while(player7.getStamina()>0){

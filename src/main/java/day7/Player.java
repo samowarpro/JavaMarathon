@@ -5,7 +5,7 @@ public class Player {
     private final static int MAX_STAMINA=100;
     private final static int MIN_STAMINA=0;
     //изначально их 0, выходом на поле считается создание экземпляра класса, уходом - когда игрок устал
-    static int countPlayers=0;
+    private static int countPlayers=0;
 
    public Player (int stamina){
         this.stamina=stamina;

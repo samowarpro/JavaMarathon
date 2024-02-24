@@ -11,8 +11,8 @@ public class Car {
 
     public int yearDifference(int inputYear){
         int diff = year - inputYear;
-        System.out.println(Math.abs(diff));
-        return diff;
+        //System.out.println(Math.abs(diff));
+        return Math.abs(diff);
     }
 
     public void setYear(int carYear) {
