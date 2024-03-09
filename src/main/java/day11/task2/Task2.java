@@ -25,6 +25,11 @@ package day11.task2;
 //Magician{health=0}
 
 
+import day11.task2.Characters.Magician;
+import day11.task2.Characters.Paladin;
+import day11.task2.Characters.Shaman;
+import day11.task2.Characters.Warrior;
+
 public class Task2 {
     public static void main(String[] args) {
     Paladin paladin = new Paladin();

@@ -34,10 +34,13 @@ public class Picker implements Worker {
 
     @Override
     public void bonus() {
-        if (myWarehouse.getCountPickedOrders()>=10000 && !isPayed){
+        if (isPayed)
+            return;
+
+        if (myWarehouse.getCountPickedOrders()>=10000){
             salary += 70000;
             isPayed=true;}
-                else if (myWarehouse.getCountPickedOrders()<10000 && !isPayed)
+                else if (myWarehouse.getCountPickedOrders()<10000)
                     System.out.println("Бонус пока не доступен");
                         else System.out.println("Бонус уже был выплачен");
     }

@@ -17,10 +17,13 @@ public class Courier implements Worker {
 
     @Override
     public void bonus() {
-        if (myWarehouse.getCountDeliveredOrders()>=10000 && !isPayed){
+        if (isPayed)
+            return;
+
+        if (myWarehouse.getCountDeliveredOrders()>=10000){
             salary += 50000;
             isPayed=true;}
-                else if (myWarehouse.getCountDeliveredOrders()<10000 && !isPayed)
+                else if (myWarehouse.getCountDeliveredOrders()<10000)
                     System.out.println("Бонус пока не доступен");
                         else System.out.println("Бонус уже был выплачен");
     }

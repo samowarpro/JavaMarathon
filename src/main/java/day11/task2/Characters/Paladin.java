@@ -1,4 +1,7 @@
-package day11.task2;
+package day11.task2.Characters;
+
+import day11.task2.MagicAttack;
+import day11.task2.PhysAttack;
 
 public class Paladin extends Hero implements Healer, PhysAttack, MagicAttack {
 
@@ -29,15 +32,6 @@ public class Paladin extends Hero implements Healer, PhysAttack, MagicAttack {
     @Override
     public void healTeammate(Hero hero) {
 
-    }
-
-    @Override
-    public void physicalAttack(Hero hero) {
-        if(hero.health>MIN){
-            if(hero.health-(physAtt-(physAtt*hero.physDef))>MIN){
-                hero.health=hero.health-(physAtt-(physAtt*hero.physDef));
-            } else hero.health=MIN;
-        } else hero.health=MIN;
     }
 
     @Override

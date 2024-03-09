@@ -1,4 +1,6 @@
-package day11.task2;
+package day11.task2.Characters;
+
+import day11.task2.MagicAttack;
 
 public class Magician extends Hero implements MagicAttack {
 
